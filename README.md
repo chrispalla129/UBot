@@ -1,4 +1,4 @@
-<h2> Note: This cannot be ran without a .env containing the Discord Token & Guild Name </h2>
+<h1> Note: This cannot be ran without a .env containing the Discord Token & Guild Name </h1>
 
 <h2> Inspiration </h2>
 We were inspired by having to take online classes and utilizing many different services such as Zoom. We wanted to see if we could implement a competitive all in one system on Discord.
