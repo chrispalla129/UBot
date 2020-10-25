@@ -33,7 +33,6 @@ class office_hours(commands.Cog):
                 for student in channel.members:
                     self.q.put(student)
 
-
     @bot.command(name='next', help="sends the next person in the Queue to whichever TA called for the next student")
     @commands.has_any_role("TA", "Professor")
     async def get_next(self, ctx):

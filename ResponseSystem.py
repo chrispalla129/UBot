@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 from discord.utils import get
 import csv
-import os
 
 
 # command prompt = $Poll: <Title> [Option1, Option2, Option3, etc]
@@ -99,7 +98,8 @@ class response_system(commands.Cog):
     # {Poll Title: title, Option A: [List], Option B: [List 2], ...., etc}
     # {Student: [Question, Answer]}
 
-    @bot.command(name="Close_Polls", help="Creates a CSV file that can be accessed in spreadsheet software of all student responses on every poll given on the server")
+    @bot.command(name="Close_Polls",
+                 help="Creates a CSV file that can be accessed in spreadsheet software of all student responses on every poll given on the server")
     @commands.has_any_role("Professor", "TA")
     async def capture_polls(self, ctx):
         if not self.pollList:
@@ -149,4 +149,3 @@ class response_system(commands.Cog):
             f"Here are the results of your questions: "
         )
         await professor.dm_channel.send(files=[discord.File("output.csv")])
-

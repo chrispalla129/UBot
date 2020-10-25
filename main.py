@@ -7,25 +7,20 @@ import os
 import OfficeHours
 import ResponseSystem
 from discord.utils import get
-from discord import Message
 from discord.ext import commands
-from discord.ext.commands import has_permissions, CheckFailure, MissingPermissions, Context
+from discord.ext.commands import MissingPermissions, Context
 from dotenv import load_dotenv
 
 global student
 global ta
 global professor
+global class_syllabus
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
 # bot init
-
-
-global class_syllabus
-print(discord.version_info)
-
 intents = discord.Intents.default()
 intents.members = True
 bot = commands.Bot('$', intents=intents)
