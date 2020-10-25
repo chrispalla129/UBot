@@ -14,7 +14,7 @@ class office_hours(commands.Cog):
 
     # command to enqueue everyone waiting for office hours
     @bot.command(name='start_OH', help="Initializes a queue with all of the people in the Office Hours Wait Room")
-    @commands.has_any_role({"TA", "Professor"})
+    @commands.has_any_role("TA", "Professor")
     async def on_start(self, ctx):
         if ctx.message.author.voice is None:
             await ctx.send(f"{ctx.message.author.mention} Join a call to designate an office")

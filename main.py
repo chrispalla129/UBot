@@ -58,7 +58,7 @@ async def set_ta(ctx, target: discord.Member):
 async def define_syllabus(ctx, syllabus):
     try:
         global class_syllabus
-        class_syllabus = ctx.message.contents
+        class_syllabus = ctx.message.content
         await ctx.send(syllabus + 'has been set ')
     except MissingPermissions:
         await ctx.send(f"{ctx.message.author.mention} You're not allowed to do that!")
@@ -109,12 +109,12 @@ async def begin(ctx: Context):
         if category.name == "Class":
             await category.create_voice_channel("Class Lecture")
             await category.create_text_channel("Class Discussion")
-            await get(guild.voice_channels, name="Class Lecture").set_permissions(student, speak=False)
+            #await get(guild.voice_channels, name="Class Lecture").set_permissions(student, speak=False)
         elif category.name == "Office Hours":
             await category.create_voice_channel("Office Hours Discussion 1")
             await category.create_voice_channel("Office Hours Discussion 2")
             await category.create_voice_channel("Office Hours Waiting Room")
-            await get(category.voice_channels, name="Office Hours Waiting Room").set_permissions(student, speak=False)
+            #await get(category.voice_channels, name="Office Hours Waiting Room").set_permissions(student, speak=False)
             await category.create_text_channel("Office Hours Q&A")
         elif category.name == "General":
             await category.create_voice_channel("Student Discussion 1")
