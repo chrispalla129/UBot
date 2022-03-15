@@ -24,6 +24,8 @@ This was a good experience in having to read documentation. We also learned thro
 The project most likely could benefit from more rigorous testing to ensure that it is completely stable.
 
 <h2>Built With</h2>
-<br>discord.py</br>
-<br>PyCharm Code With Me (note that this means that all contributions show up as pushed by @chrispalla129)</br>
-<br>Python</br>
+<ol>
+  <li> discord.py  </li>
+  <li> PyCharm Code With Me (note that this means that all contributions show up as pushed by @chrispalla129)  </li>
+  <li> Python </li>
+ </ol
